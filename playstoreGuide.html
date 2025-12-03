@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Google Play .AAB Upload Guide 2025 — Ultimate Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+            --card: rgba(20, 25, 50, 0.65);
+            --card-border: rgba(100, 150, 255, 0.25);
+            --text: #e0e7ff;
+            --text-light: #94a3b8;
+            --primary: #6366f1;
+            --accent: #a78bfa;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --glass: rgba(255, 255, 255, 0.06);
+        }
+        [data-theme="light"] {
+            --bg: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+            --card: rgba(255, 255, 255, 0.85);
+            --card-border: rgba(99, 102, 241, 0.2);
+            --text: #1e293b;
+            --text-light: #64748b;
+            --primary: #4f46e5;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; background-attachment: fixed; overflow-x: hidden; }
+        .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+
+        .container { max-width: 1800px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 380px 1fr; gap: 30px; position: relative; z-index: 1; }
+        nav { background: var(--card); backdrop-filter: blur(20px); border: 1px solid var(--card-border); border-radius: 28px; padding: 40px 30px; position: sticky; top: 20px; height: fit-content; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+        .logo h1 { font-size: 2.6em; background: linear-gradient(135deg, #6366f1, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; text-align: center; }
+        .theme-toggle { position: fixed; top: 20px; right: 20px; background: var(--glass); border: 1px solid var(--card-border); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(10px); transition: all 0.4s; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .theme-toggle:hover { transform: scale(1.15); }
+
+        nav ul li a { display: flex; align-items: center; padding: 18px 24px; margin: 12px 0; border-radius: 18px; color: var(--text-light); text-decoration: none; font-weight: 500; transition: all 0.4s; }
+        nav ul li a i { margin-right: 16px; font-size: 1.3em; }
+        nav ul li a:hover { background: rgba(99, 102, 241, 0.2); color: white; transform: translateX(10px); }
+        nav ul li a.active { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4); font-weight: 700; }
+
+        main { background: var(--card); backdrop-filter: blur(20px); border: 1px solid var(--card-border); border-radius: 28px; overflow: hidden; box-shadow: 0 25px 80px rgba(0,0,0,0.5); }
+        .header { background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899); padding: 140px 80px; text-align: center; position: relative; overflow: hidden; }
+        .header h1 { font-size: 4.8em; font-weight: 900; margin-bottom: 20px; text-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+        .header p { font-size: 1.8em; opacity: 0.9; font-weight: 300; }
+
+        .step { padding: 80px; scroll-margin-top: 120px; }
+        .step h2 { font-size: 3.2em; margin-bottom: 40px; background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
+
+        .card { background: var(--glass); border: 1px solid var(--card-border); border-radius: 24px; padding: 40px; margin: 40px 0; backdrop-filter: blur(15px); box-shadow: 0 15px 40px rgba(0,0,0,0.3); transition: all 0.4s; }
+        .card:hover { transform: translateY(-10px); }
+
+        .code-block { position: relative; background: #0d1117; border-radius: 20px; overflow: hidden; margin: 50px 0; box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
+        .code-header { background: linear-gradient(90deg, #6366f1, #8b5cf6); padding: 20px 40px; color: white; font-weight: bold; font-size: 1.3em; }
+        pre { padding: 40px !important; font-family: 'JetBrains Mono', monospace; font-size: 1.15em; line-height: 1.8; overflow-x: auto; margin: 0 !important; color: #d4d4d4; }
+        .copy-btn { position: absolute; top: 15px; right: 20px; background: rgba(255,255,255,0.2); color: white; border: none; padding: 12px 24px; border-radius: 12px; cursor: pointer; font-weight: bold; backdrop-filter: blur(10px); }
+        .copy-btn:hover { background: rgba(255,255,255,0.4); }
+
+        .checklist-item { background: var(--glass); padding: 28px 40px; margin: 20px 0; border-radius: 20px; display: flex; align-items: center; border: 1px solid var(--card-border); transition: all 0.3s; }
+        .checklist-item:hover { transform: translateX(10px); border-color: var(--primary); }
+        .checklist-item input { transform: scale(2.2); margin-right: 30px; accent-color: var(--primary); cursor: pointer; }
+
+        .warning, .tip, .success { padding: 35px; margin: 50px 0; border-radius: 20px; border-left: 12px solid; font-size: 1.3em; backdrop-filter: blur(10px); }
+        .warning { background: rgba(251, 191, 36, 0.15); border-color: var(--warning); }
+        .tip { background: rgba(14, 165, 233, 0.15); border-color: #0ea5e9; }
+        .success { background: rgba(16, 185, 129, 0.15); border-color: var(--success); }
+
+        footer { text-align: center; padding: 100px 40px; font-size: 1.5em; opacity: 0.8; }
+
+        @media (max-width: 1100px) { .container { grid-template-columns: 1fr; } .header h1 { font-size: 3.5em; } }
+    </style>
+</head>
+<body>
+    <canvas class="particles" id="particles"></canvas>
+    
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </div>
+
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>AAB Guide 2025</h1>
+                <p>Ultimate Premium Edition</p>
+            </div>
+            <ul>
+                <li><a href="#checklist" class="active"><i class="fas fa-clipboard-check"></i> Checklist</a></li>
+                <li><a href="#keystore"><i class="fas fa-key"></i> Generate Keystore</a></li>
+                <li><a href="#s1"><i class="fas fa-sign-in-alt"></i> 1. Login to Console</a></li>
+                <li><a href="#s2"><i class="fas fa-plus-circle"></i> 2. Create New App</a></li>
+                <li><a href="#s3"><i class="fas fa-store"></i> 3. Store Listing</a></li>
+                <li><a href="#s4"><i class="fas fa-shield-alt"></i> 4. Privacy Policy</a></li>
+                <li><a href="#s5"><i class="fas fa-file-alt"></i> 5. App Content</a></li>
+                <li><a href="#s6"><i class="fas fa-truck"></i> 6. Production Track</a></li>
+                <li><a href="#s7"><i class="fas fa-key"></i> 7. App Signing</a></li>
+                <li><a href="#s8"><i class="fas fa-upload"></i> 8. Upload AAB + build.gradle</a></li>
+                <li><a href="#s9"><i class="fas fa-sticky-note"></i> 9. Release Notes</a></li>
+                <li><a href="#s10"><i class="fas fa-rocket"></i> 10. Review & Rollout</a></li>
+                <li><a href="#s11"><i class="fas fa-clock"></i> 11. Review Timeline</a></li>
+                <li><a href="#errors"><i class="fas fa-bug"></i> Common Errors</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="header">
+                <h1>Complete Google Play<br>.AAB Upload Guide 2025</h1>
+                <p>Full English • Every Step Explained • With Keystore & build.gradle • Zero Confusion</p>
+            </div>
+
+            <!-- 0. Checklist -->
+            <section id="checklist" class="step">
+                <h2>Before You Start – Complete Checklist</h2>
+                <div class="card">
+                    <div class="checklist-item"><input type="checkbox"><label>Google Play Console account created & $25 one-time fee paid</label></div>
+                    <div class="checklist-item"><input type="checkbox"><label>Upload keystore (.jks file) generated</label></div>
+                    <div class="checklist-item"><input type="checkbox"><label>Privacy Policy URL (hosted online)</label></div>
+                    <div class="checklist-item"><input type="checkbox"><label>App Icon (512×512 PNG)</label></div>
+                    <div class="checklist-item"><input type="checkbox"><label>At least 2 high-quality screenshots</label></div>
+                    <div class="checklist-item"><input type="checkbox"><label>Feature Graphic (1024×500)</label></div>
+                </div>
+            </section>
+
+            <!-- Keystore Generation -->
+            <section id="keystore" class="step">
+                <h2>How to Generate Upload Keystore (Do This Only Once!)</h2>
+                <div class="card tip">
+                    <strong>Method 1: Android Studio (Recommended for Beginners)</strong>
+                    <ol>
+                        <li>Open Android Studio → Build → Generate Signed Bundle / APK</li>
+                        <li>Select “Android App Bundle” → Next</li>
+                        <li>Click “Create new…”</li>
+                        <li>Fill: Key store path, passwords, alias: upload, validity: 100 years</li>
+                        <li>Fill certificate info → OK → Finish</li>
+                    </ol>
+                </div>
+                <div class="code-block">
+                    <div class="code-header">Method 2: Terminal Command</div>
+                    <pre>keytool -genkey -v -keystore my-upload-key.jks -alias upload -keyalg RSA -keysize 2048 -validity 10000</pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                </div>
+                <div class="card warning">
+                    <strong>BACKUP YOUR KEYSTORE EVERYWHERE!</strong><br>
+                    Google Drive + USB + Email + Cloud. If you lose it → You can NEVER update your app again!
+                </div>
+            </section>
+
+            <section id="s1" class="step"><div class="card"><h2>1. Log in to Google Play Console</h2><p><a href="https://play.google.com/console" target="_blank">https://play.google.com/console</a></p><p>Use the Google account that paid the $25 developer fee.</p></div></section>
+
+            <section id="s2" class="step"><div class="card"><h2>2. Create a New App</h2><p>Click blue “Create app” button → Fill name (≤30 chars), language, type, free/paid → Create app</p></div></section>
+
+            <section id="s3" class="step"><div class="card"><h2>3. Complete Main Store Listing</h2><ul><li>Title ≤ 30 chars</li><li>Short description ≤ 80 chars</li><li>Full description ≤ 4000 chars</li><li>App icon 512×512 PNG (no transparency)</li><li>Feature graphic 1024×500</li><li>Minimum 2 screenshots</li></ul></div></section>
+
+            <section id="s4" class="step"><div class="card"><h2>4. Add Privacy Policy URL (Mandatory)</h2><p>Go to Policy → Privacy policy</p><p>Free generators:<br><a href="https://www.freeprivacypolicy.com" target="_blank">freeprivacypolicy.com</a><br><a href="https://app-privacy-policy-generator.firebaseapp.com" target="_blank">Firebase Generator</a></p></div></section>
+
+            <section id="s5" class="step"><div class="card"><h2>5. Complete App Content Section</h2><p>All required:<br>• Data safety (be 100% honest)<br>• Content rating<br>• Target audience<br>• Ads declaration</p></div></section>
+
+            <section id="s6" class="step"><div class="card"><h2>6. Go to Production Track</h2><p>Release → Production → Create new release</p></div></section>
+
+            <section id="s7" class="step"><div class="card"><h2>7. Choose App Signing</h2><p><strong>RECOMMENDED:</strong> “Let Google manage and protect your app signing key” (Safest option)</p></div></section>
+
+            <!-- MAIN STEP -->
+            <section id="s8" class="step">
+                <h2>8. Final build.gradle + Generate & Upload .AAB</h2>
+                <div class="code-block">
+                    <div class="code-header">Perfect app/build.gradle (2025 Working)</div>
+                    <pre>android {
+    defaultConfig {
+        applicationId "com.yourcompany.yourapp"
+        versionCode 35
+        versionName "6.0.0"
+    }
+    signingConfigs {
+        release {
+            storeFile file("C:/keys/my-upload-key.jks")
+            storePassword "yourpassword"
+            keyAlias "upload"
+            keyPassword "yourpassword"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}</pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <div class="card tip">
+                    <strong>Generate Release AAB:</strong><br>
+                    <code>./gradlew clean<br>./gradlew bundleRelease</code><br><br>
+                    AAB Location: <code>app/build/outputs/bundle/release/app-release.aab</code>
+                </div>
+            </section>
+
+            <section id="s9" class="step"><div class="card"><h2>9. Add Release Notes</h2><p>Write what's new in this version (English + other languages if possible)</p></div></section>
+
+            <section id="s10" class="step">
+                <h2>10. Review Release & Start Rollout</h2>
+                <div class="card success">
+                    <strong>Congratulations!</strong><br>
+                    Click “Review release” → Fix any red warnings → Click <strong>“Start rollout to Production”</strong><br><br>
+                    Your app is now submitted!
+                </div>
+            </section>
+
+            <section id="s11" class="step"><div class="card"><h2>11. Review Timeline</h2><ul><li>First-time apps: 3–7 days (sometimes longer)</li><li>Future updates: Usually within 24 hours</li><li>You’ll get email when approved/rejected</li></ul></div></section>
+
+            <section id="errors" class="step">
+                <h2>Most Common Errors & Fixes</h2>
+                <div class="card warning">You uploaded a debug-signed bundle → Fix: Run <code>./gradlew bundleRelease</code></div>
+                <div class="card warning">Version code already used → Fix: Increase versionCode by 1</div>
+                <div class="card warning">Missing Privacy Policy / Data Safety → Complete all required sections</div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        © 2025 Complete Google Play AAB Upload Guide — Ultimate Premium Edition<br>
+        <small>Made with love for Android developers worldwide</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles", {"particles":{"number":{"value":80},"color":{"value":"#6366f1"},"shape":{"type":"circle"},"opacity":{"value":0.5,"random":true},"size":{"value":3,"random":true},"line_linked":{"enable":true,"distance":150,"color":"#6366f1","opacity":0.2,"width":1},"move":{"enable":true,"speed":2}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"}}}});
+
+        function toggleTheme() {
+            const root = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            if (root.getAttribute('data-theme') === 'dark') {
+                root.setAttribute('data-theme', 'light');
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                root.setAttribute('data-theme', 'dark');
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        }
+
+        document.querySelectorAll('nav a').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(a.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            document.querySelectorAll('section').forEach(sec => {
+                if (sec.offsetTop - 200 <= window.pageYOffset) current = sec.getAttribute('id');
+            });
+            document.querySelectorAll('nav a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === `#${current}`) a.classList.add('active');
+            });
+        });
+
+        function copyCode(btn) {
+            const text = btn.previousElementSibling.textContent;
+            navigator.clipboard.writeText(text);
+            btn.textContent = "Copied!";
+            setTimeout(() => btn.textContent = "Copy", 2000);
+        }
+    </script>
+</body>
+</html>
